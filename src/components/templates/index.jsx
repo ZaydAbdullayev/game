@@ -1,14 +1,14 @@
 import { useEffect, useRef } from "react";
 import kaboom from "kaboom";
-import { heros } from "../../context/data";
+import {useParams} from "react-router-dom"
 
 export function Game() {
   const canvasRef = useRef(null);
+  const {player="player1"}=useParams()
 
   useEffect(() => {
     const vw = window.innerWidth - 4;
     const vh = window.innerHeight - 4;
-    let hero = "player1";
 
     const k = kaboom({
       canvas: canvasRef.current,
@@ -49,7 +49,8 @@ export function Game() {
     });
 
     Promise.all([
-      k.loadSprite("player", "/src/assets/hero-1.png"),
+      k.loadSprite("player1", "/src/assets/hero-1.png"),
+      k.loadSprite("player2", "/src/assets/hero-2.png"),
       k.loadSprite("stage", "/src/assets/stage-1.png"),
       k.loadSprite("enemy", "/src/assets/enemy-1.png"),
       k.loadSprite("enemy1", "/src/assets/enemy-2.png"),
@@ -64,13 +65,13 @@ export function Game() {
       k.loadSound("lose-heart", "/src/assets/lose-heart.mp3"),
     ]).then(() => {
       const player = k.add([
-        k.sprite("player"),
+        k.sprite(player),
         k.pos(vw / 2, vh / 2 + 200),
         k.area(),
         k.scale(0.2),
         k.body(),
         k.anchor("bot"),
-        "player",
+        player,
       ]);
 
       const stageWidth = vw * 0.7;
