@@ -10,4 +10,5 @@ export default defineConfig({
   ssr: {
     noExternal: ["kaboom"], // Kaboom optimize edilmesin
   },
+  base: "/"
 });
