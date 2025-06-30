@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import kaboom from "kaboom";
 import { useParams } from "react-router-dom";
 
+
 export function Game() {
   const canvasRef = useRef(null);
   const { player: playerId = "player1" } = useParams();
