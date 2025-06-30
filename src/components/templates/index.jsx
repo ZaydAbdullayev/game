@@ -71,7 +71,7 @@ export function Game() {
         k.scale(0.2),
         k.body(),
         k.anchor("bot"),
-        player,
+        "player",
       ]);
 
       const stageWidth = vw * 0.7;
