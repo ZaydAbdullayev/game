@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.05rem;
+  word-spacing: 4px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #f2f2f2;
+  --text-color: #0b0b0b;
+}
+
+input {
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button:active {
+  transform: scale(0.95) !important;
+}
+
+.canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loader {
+  margin-bottom: -4px;
+  margin-left: 10px;
+  font-size: 20px;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.layout {
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 3% 5%;
+}
+
+.p-r {
+  position: relative;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.f1 {
+  flex: 1;
+}
+
+.df {
+  display: flex;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.aic {
+  align-items: center;
+}
+
+.fdc {
+  flex-direction: column;
+}
+
+.fw {
+  flex-wrap: wrap;
+}
+
+.gap-5 {
+  gap: 5px;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-15 {
+  gap: 15px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
