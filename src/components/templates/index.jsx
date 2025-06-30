@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import kaboom from "kaboom";
-import {useParams} from "react-router-dom"
+import { useParams } from "react-router-dom";
 
 export function Game() {
   const canvasRef = useRef(null);
-  const {player="player1"}=useParams()
+  const { player: playerId = "player1" } = useParams();
 
   useEffect(() => {
     const vw = window.innerWidth - 4;
@@ -64,14 +64,16 @@ export function Game() {
       k.loadSound("jump", "/src/assets/jump.mp3"),
       k.loadSound("lose-heart", "/src/assets/lose-heart.mp3"),
     ]).then(() => {
+      const pl = playerId === "player1" ? "player1" : "player2";
+      
       const player = k.add([
-        k.sprite(player),
+        k.sprite(playerId),
         k.pos(vw / 2, vh / 2 + 200),
         k.area(),
         k.scale(0.2),
         k.body(),
         k.anchor("bot"),
-        "player",
+        pl,
       ]);
 
       const stageWidth = vw * 0.7;
