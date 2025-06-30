@@ -38,7 +38,7 @@ export function Game() {
     let levelBar, levelFill, timeText, coinText, levelText;
 
     // === Arka Plan ===
-    k.loadSprite("bg", "/src/assets/bg.png").then((tex) => {
+    k.loadSprite("bg", "/assets/bg.png").then((tex) => {
       k.add([
         k.sprite("bg"),
         k.pos(0, 0),
@@ -50,20 +50,20 @@ export function Game() {
     });
 
     Promise.all([
-      k.loadSprite("player1", "/src/assets/hero-1.png"),
-      k.loadSprite("player2", "/src/assets/hero-2.png"),
-      k.loadSprite("stage", "/src/assets/stage-1.png"),
-      k.loadSprite("enemy", "/src/assets/enemy-1.png"),
-      k.loadSprite("enemy1", "/src/assets/enemy-2.png"),
-      k.loadSprite("enemy2", "/src/assets/enemy-3.png"),
-      k.loadSprite("enemy3", "/src/assets/enemy-4.png"),
-      k.loadSprite("enemy4", "/src/assets/enemy-5.png"),
-      k.loadSprite("heart", "/src/assets/heart.gif"),
-      k.loadSprite("coin", "/src/assets/coin.png"),
-      k.loadSound("score", "/src/assets/score.mp3"),
-      k.loadSound("game-over", "/src/assets/game-over.mp3"),
-      k.loadSound("jump", "/src/assets/jump.mp3"),
-      k.loadSound("lose-heart", "/src/assets/lose-heart.mp3"),
+      k.loadSprite("player1", "/assets/hero-1.png"),
+      k.loadSprite("player2", "/assets/hero-2.png"),
+      k.loadSprite("stage", "/assets/stage-1.png"),
+      k.loadSprite("enemy", "/assets/enemy-1.png"),
+      k.loadSprite("enemy1", "/assets/enemy-2.png"),
+      k.loadSprite("enemy2", "/assets/enemy-3.png"),
+      k.loadSprite("enemy3", "/assets/enemy-4.png"),
+      k.loadSprite("enemy4", "/assets/enemy-5.png"),
+      k.loadSprite("heart", "/assets/heart.gif"),
+      k.loadSprite("coin", "/assets/coin.png"),
+      k.loadSound("score", "/assets/score.mp3"),
+      k.loadSound("game-over", "/assets/game-over.mp3"),
+      k.loadSound("jump", "/assets/jump.mp3"),
+      k.loadSound("lose-heart", "/assets/lose-heart.mp3"),
     ]).then(() => {
       const pl = playerId === "player1" ? "player1" : "player2";
       

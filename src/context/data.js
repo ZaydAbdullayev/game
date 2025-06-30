@@ -1,11 +1,11 @@
-import hero1 from "../assets/hero-1.png";
-import hero2 from "../assets/hero-2.png";
+import hero1 from "/assets/hero-1.png";
+import hero2 from "/assets/hero-2.png";
 
-import enemy1 from "../assets/enemy-1.png";
-import enemy2 from "../assets/enemy-2.png";
-import enemy3 from "../assets/enemy-3.png";
-import enemy4 from "../assets/enemy-4.png";
-import enemy5 from "../assets/enemy-5.png";
+import enemy1 from "/assets/enemy-1.png";
+import enemy2 from "/assets/enemy-2.png";
+import enemy3 from "/assets/enemy-3.png";
+import enemy4 from "/assets/enemy-4.png";
+import enemy5 from "/assets/enemy-5.png";
 
 export const characters = [
     {

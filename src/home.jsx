@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import "./home.css";
-import intro_hero from "./assets/intro.png";
-import map from "./assets/bg.png";
+import intro_hero from "/assets/intro.png";
+import map from "/assets/bg.png";
 import { characters, heros } from "./context/data";
 import { RiTwitterXFill } from "react-icons/ri";
 import { GiRaiseZombie } from "react-icons/gi";
