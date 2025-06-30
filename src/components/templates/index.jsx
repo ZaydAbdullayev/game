@@ -8,8 +8,8 @@ export function Game() {
   const { player: playerId = "player1" } = useParams();
 
   useEffect(() => {
-    const vw = window.innerWidth - 4;
-    const vh = window.innerHeight - 4;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
 
     const k = kaboom({
       canvas: canvasRef.current,
