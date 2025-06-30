@@ -7,12 +7,18 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { GiRaiseZombie } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import "./components/index.scss"
 
 export function App() {
   const navigate = useNavigate();
   const [selectedHero, setSelectedHero] = useState(null);
-  const [showHeroModal, setShowHeroModal] = useState(true);
+  const [showHeroModal, setShowHeroModal] = useState(false);
 
+  const startGame = () =>{
+    navigate(`/game/${selectedHero.id}`);
+    setShowHeroModal(false)
+  }
+  
   return (
     <div className="intro-wrapper">
       <div className="w100 df aic jcc pd-20 navbar">
@@ -37,7 +43,7 @@ export function App() {
               Sign in to pre-register now and prepare for the battle. Sign in to
               pre-register now and prepare for the battle
             </p>
-            <button className="start-button" onClick={() => navigate("/game")}>
+            <button className="start-button" onClick={() => setShowHeroModal(true)}>
               Start Game
             </button>
           </div>
@@ -151,7 +157,7 @@ export function App() {
           </div>
           <button
             className="start-buton"
-            onClick={() => setShowHeroModal(false)}
+            onClick={startGame}
           >
             Select and Play
           </button>
