@@ -79,10 +79,10 @@ export function Game() {
       const stageWidth = vw * 0.7;
       const stageHeight = 100;
 
-      const platforms = [
+       const platforms = [
         [vw / 2, vh / 2 - 180],
-        [-300, vh / 2 + 70],
-        [vw + 300, vh / 2 + 70],
+        [-200, vh / 2 + 70],
+        [vw + 200, vh / 2 + 70],
         [vw / 2, vh / 2 + 300],
       ];
 
